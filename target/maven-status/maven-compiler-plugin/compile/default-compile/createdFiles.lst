@@ -2,6 +2,7 @@ com\qa\persistance\domain\Student.class
 com\qa\rest\JAXconnector.class
 com\qa\rest\Endpoints.class
 com\qa\persistance\domain\Classroom.class
+com\qa\persistance\repository\ClassroomMapRepository.class
 com\qa\persistance\repository\ClassroomRepositoryImpl.class
 com\qa\util\JSONUtil.class
 com\qa\buisness\BuisnessRules.class
