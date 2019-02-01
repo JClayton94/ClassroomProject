@@ -17,10 +17,10 @@ public class Endpoints {
 	@Inject
 	BuisnessRules repo;
 
-	@Path("/getAllAccounts")
+	@Path("/getAllClassrooms")
 	@GET
 	@Produces("application/json")
-	public String getAllAccounts() {
+	public String getAllClassrooms() {
 
 		return repo.getAllClassrooms();
 
@@ -29,7 +29,7 @@ public class Endpoints {
 	@Path("/createClassroom")
 	@POST
 	@Produces("application/json")
-	public String createAccount(String classroom) {
+	public String createClassroom(String classroom) {
 
 		return repo.createClassroom(classroom);
 
@@ -38,7 +38,7 @@ public class Endpoints {
 	@Path("/{id}")
 	@DELETE
 	@Produces("application/json")
-	public String deleteAccount(@PathParam("id") Long id) {
+	public String deleteClassroom(@PathParam("id") Long id) {
 
 		return repo.deleteClassroom(id);
 
@@ -47,7 +47,7 @@ public class Endpoints {
 	@Path("/{id}")
 	@PUT
 	@Produces("application/json")
-	public String updateAccount(@PathParam("id") Long id, String classroom) {
+	public String updateClassroom(@PathParam("id") Long id, String classroom) {
 
 		return repo.updateClassroom(id, classroom);
 

@@ -4,8 +4,6 @@ com\qa\rest\Endpoints.class
 com\qa\persistance\domain\Classroom.class
 com\qa\persistance\repository\ClassroomRepositoryImpl.class
 com\qa\util\JSONUtil.class
-com\qa\persistance\repository\StudentRepositoryImpl.class
 com\qa\buisness\BuisnessRules.class
 com\qa\buisness\BuisnessRulesImpl.class
 com\qa\persistance\repository\ClassroomRepository.class
-com\qa\persistance\repository\StudentRepository.class

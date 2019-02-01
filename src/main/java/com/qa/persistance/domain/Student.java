@@ -1,5 +1,6 @@
 package com.qa.persistance.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,33 +13,34 @@ public class Student {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long traineeID;
+	@Column(name = "STUDENTID")
+	private Long studentID;
 
-	private String traineeName;
+	private String studentName;
 
 	public Student() {
 
 	}
 
-	public Student(Long traineeID, String traineeName) {
-		this.traineeID = traineeID;
-		this.traineeName = traineeName;
+	public Student(Long studentID, String studentName) {
+		this.studentID = studentID;
+		this.studentName = studentName;
 	}
 
-	public Long getTraineeID() {
-		return traineeID;
+	public Long getStudentID() {
+		return studentID;
 	}
 
-	public void setTraineeID(Long traineeID) {
-		this.traineeID = traineeID;
+	public void setStudentID(Long studentID) {
+		this.studentID = studentID;
 	}
 
-	public String getTraineeName() {
-		return traineeName;
+	public String getStudentName() {
+		return studentName;
 	}
 
-	public void setTraineeName(String traineeName) {
-		this.traineeName = traineeName;
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
 	}
 
 }
