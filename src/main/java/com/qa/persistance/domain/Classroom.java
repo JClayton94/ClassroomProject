@@ -1,6 +1,7 @@
 package com.qa.persistance.domain;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -8,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
 
 @Entity
 public class Classroom {
@@ -18,14 +20,14 @@ public class Classroom {
 
 	private String trainer;
 	
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	private ArrayList<Student> students;
+	@OneToMany(targetEntity = com.qa.persistance.domain.Student.class ,cascade = CascadeType.ALL, mappedBy ="students", orphanRemoval = true)
+	private List<Student> students;
 
 	public Classroom() {
 
 	}
 
-	public Classroom(Long classroomID, String trainer, ArrayList<Student> students) {
+	public Classroom(Long classroomID, String trainer, List<Student> students) {
 		this.classroomID = classroomID;
 		this.trainer = trainer;
 		this.students = students;
@@ -47,7 +49,7 @@ public class Classroom {
 		this.trainer = trainer;
 	}
 
-	public ArrayList<Student> getStudents() {
+	public List<Student> getStudents() {
 		return students;
 	}
 
